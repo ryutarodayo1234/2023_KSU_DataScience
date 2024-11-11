@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+body {
+  margin: 0;
+}
+
+/*ローディング画面*/
+#loading {
+  transition: all 3s; /*ローディングにかかる時間*/
+  background-color: #FFAF91;
+  color: #333333;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
+#loading div{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.loadingImg {
+  margin: 0 auto;
+  display: block;
+}
+
+.loading-text {
+  font-weight: bold;
+  text-align: center;
+}
+
+.spin {
+  width: 64px;
+  height: auto;
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+header {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 10;
+}
+
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 25%;
+  height: auto;
+}
+
+main img{
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+}
