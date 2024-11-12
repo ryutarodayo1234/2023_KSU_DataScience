@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* CSS */
+
+body {
+  margin: 0;
+  background: radial-gradient(circle, #000 30%, #333 50%, #333 70%, #FFF 100%);
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 地図エリア */
+#map {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+#blur {
+  pointer-events: none;
+  width: 500px; /* 覗き穴のサイズ */
+  height: 500px;
+  border-radius: 50%; /* 完全な円に */
+  position: absolute;
+  top: 50%; /* 縦中央に配置 */
+  left: 50%; /* 横中央に配置 */
+  transform: translate(-50%, -50%); /* 覗き穴の中央寄せ */
+  background-color: transparent; /* 背景色なし */
+  z-index: 30;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6); /* 覗き穴の周りに透明度のある背景 */
+}
+
+.leaflet-control-attribution{
+  position: relative;
+  top: 190px;
+  left: -130px;
+}
+
+img {
+  width: 100%;
+}
+
+.leaflet-control-container{
+  width: 500px;
+  height: 60px;
+  position: relative;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 0px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: #000;
+  color: #FFF;
+}
