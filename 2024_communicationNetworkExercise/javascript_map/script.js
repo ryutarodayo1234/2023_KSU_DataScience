@@ -24,16 +24,10 @@ const circleIcon = L.Icon.extend({
 const whiteIcon = new circleIcon({ iconUrl: 'images/ico.png' }),
   pinkIcon = new circleIcon({ iconUrl: 'images/ico_pink.png' });
 
-L.marker([51.55321688137271, -0.16959787005461097], { icon: whiteIcon }).addTo(map)
-  .bindPopup('ロンドンの有名な<br> スタジオだよ。<br><img src="images/img01.png" alt="img">');
+L.marker([51.55321688137271, -0.16959787005461097], { icon: pinkIcon }).addTo(map)
+  .bindPopup('こいつを狙え！<br><img src="images/img01.png" alt="img">');
 // .openPopup();
 // openPopupの追加で最初から吹き出し表示
-
-L.marker([51.547546580277, -0.16719353787558758], { icon: pinkIcon }).addTo(map)
-  .bindPopup('A pretty CSS popup.<br> Easily customizable.');
-
-  // クリック位置の緯度経度表示
-const popup = L.popup();
 
 function onMapClick(e) {
   popup
@@ -43,3 +37,10 @@ function onMapClick(e) {
 }
 
 map.on('click', onMapClick);
+
+const circle = L.circle([51.55321688137271, -0.16959787005461097], {
+  color: 'red', //円の輪郭線の色
+  fillColor: '#b22222', //円の塗りつぶしの色
+  fillOpacity: 0.3, //塗りつぶしの不透明度
+  radius: 80 //半径、メートルで指定
+}).addTo(map);
