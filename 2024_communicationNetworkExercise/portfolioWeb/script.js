@@ -33,7 +33,6 @@ function expandCard(card) {
   
   // 拡大後にクローズボタンを表示
   const closeButton = card.querySelector('.close-btn');
-  closeButton.style.display = 'block';
   
   // クローズボタンのクリックイベントを設定
   closeButton.addEventListener('click', function(event) {
@@ -50,5 +49,4 @@ function collapseCard(event, card) {
   
   // クローズボタンを非表示にする
   const closeButton = card.querySelector('.close-btn');
-  closeButton.style.display = 'none';
 }
