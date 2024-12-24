@@ -46,7 +46,4 @@ function collapseCard(event, card) {
   
   // 'fullscreen' クラスを削除してカードを元に戻す
   card.classList.remove('fullscreen');
-  
-  // クローズボタンを非表示にする
-  const closeButton = card.querySelector('.close-btn');
 }
